@@ -1,331 +1,68 @@
-<!DOCTYPE html>
-<!--
-  Developer: github.com/soroushse7o
--->
-<html lang="fa" dir="rtl">
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fa" lang="fa" dir="rtl">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <meta name="author" content="github.com/soroushse7o" />
- <title>سازنده پروفایل APN برای iOS</title>
- <style>
-   :root {
-     --bg: #f5f5f7;
-     --card-bg: #ffffff;
-     --primary: #0071e3;
-     --primary-hover: #0077ed;
-     --text: #1d1d1f;
-     --subtext: #86868b;
-     --border: #d2d2d7;
-     --error: #ff3b30;
-   }
-
-   body {
-     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Roboto, sans-serif;
-     background-color: var(--bg);
-     color: var(--text);
-     max-width: 520px;
-     margin: 32px auto;
-     padding: 0 16px;
-     direction: rtl;
-     -webkit-font-smoothing: antialiased;
-   }
-
-   .container {
-     background: var(--card-bg);
-     padding: 24px;
-     border-radius: 16px;
-     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-   }
-
-   h1 {
-     font-size: 20px;
-     font-weight: 700;
-     margin: 0 0 8px 0;
-     text-align: center;
-   }
-
-   p.sub {
-     color: var(--subtext);
-     font-size: 13px;
-     line-height: 1.5;
-     text-align: center;
-     margin: 0 0 20px 0;
-   }
-
-   fieldset {
-     border: 1px solid var(--border);
-     border-radius: 10px;
-     padding: 12px 14px;
-     margin-bottom: 14px;
-   }
-
-   legend {
-     font-size: 13px;
-     font-weight: 600;
-     padding: 0 6px;
-     color: var(--text);
-   }
-
-   input[type="text"], input[type="password"] {
-     width: 100%;
-     box-sizing: border-box;
-     padding: 10px 12px;
-     margin-top: 4px;
-     border: 1px solid var(--border);
-     border-radius: 8px;
-     font-size: 14px;
-     direction: ltr;
-     text-align: left;
-     outline: none;
-     transition: border-color 0.2s;
-   }
-
-   input[type="text"]:focus, input[type="password"]:focus {
-     border-color: var(--primary);
-   }
-
-   .radio-group {
-     display: flex;
-     flex-direction: column;
-     gap: 8px;
-     margin-top: 4px;
-   }
-
-   .radio-row {
-     display: flex;
-     align-items: center;
-     gap: 8px;
-     font-size: 13px;
-     cursor: pointer;
-   }
-
-   .radio-row input {
-     cursor: pointer;
-     margin: 0;
-   }
-
-   .proxy-row {
-     display: flex;
-     gap: 8px;
-     align-items: center;
-     direction: ltr;
-   }
-
-   .proxy-row input {
-     flex: 1;
-   }
-
-   button {
-     width: 100%;
-     padding: 12px;
-     background: var(--primary);
-     color: #fff;
-     border: none;
-     border-radius: 10px;
-     font-size: 15px;
-     font-weight: 600;
-     cursor: pointer;
-     margin-top: 10px;
-     transition: background 0.2s;
-   }
-
-   button:hover {
-     background: var(--primary-hover);
-   }
-
-   .error {
-     color: var(--error);
-     font-size: 12px;
-     margin-top: 6px;
-     display: none;
-   }
-
-   .footer {
-     margin-top: 24px;
-     text-align: center;
-     font-size: 12px;
-     color: var(--subtext);
-     direction: ltr;
-   }
-
-   .footer a {
-     color: var(--primary);
-     text-decoration: none;
-     font-weight: 500;
-   }
-
-   .footer a:hover {
-     text-decoration: underline;
-   }
- </style>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>سازنده پروفایل پیکربندی APN برای iOS</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<style type="text/css">
+	   body {font-family: Tahoma, Arial, sans-serif;}
+	   label {white-space: nowrap;}
+	   input[type="text"], input[type="password"] {direction: ltr;}
+	</style>
 </head>
 <body>
-
-<div class="container">
- <h1>سازنده پروفایل APN آیفون</h1>
- <p class="sub">مشخصات شبکه خود را وارد کرده و فایل <code>.mobileconfig</code> را جهت نصب روی دستگاه دانلود کنید.</p>
-
- <form id="apnForm">
-   <fieldset>
-     <legend>نام نقطه دستیابی / APN (الزامی)</legend>
-     <input type="text" id="apn" placeholder="مثلاً: mcinet یا mtnirancell یا internet" required />
-     <div class="error" id="apnError">لطفاً ابتدا نام APN را وارد کنید.</div>
-   </fieldset>
-
-   <fieldset>
-     <legend>نام کاربری (Username)</legend>
-     <input type="text" id="username" placeholder="اختیاری" />
-   </fieldset>
-
-   <fieldset>
-     <legend>رمز عبور (Password)</legend>
-     <input type="password" id="password" placeholder="اختیاری" />
-   </fieldset>
-
-   <fieldset>
-     <legend>نوع احراز هویت (Authentication Type)</legend>
-     <div class="radio-group">
-       <label class="radio-row"><input type="radio" name="authtype" value="CHAP" checked /> CHAP</label>
-       <label class="radio-row"><input type="radio" name="authtype" value="PAP" /> PAP</label>
-     </div>
-   </fieldset>
-
-   <fieldset>
-     <legend>پروکسی (اختیاری)</legend>
-     <div class="proxy-row">
-       <input type="text" id="proxyserver" placeholder="proxy.example.com" />
-       <span>:</span>
-       <input type="text" id="proxyport" placeholder="8080" />
-     </div>
-   </fieldset>
-
-   <fieldset>
-     <legend>نوع ساختار پی‌لود (Payload Type)</legend>
-     <div class="radio-group">
-       <label class="radio-row"><input type="radio" name="payload" value="cellular" checked /> پی‌لود Cellular (پیشنهادی - iOS 7 به بالا)</label>
-       <label class="radio-row"><input type="radio" name="payload" value="apn.managed" /> پی‌لود APN (نسخه‌های قدیمی)</label>
-     </div>
-   </fieldset>
-
-   <fieldset>
-     <legend>پروتکل IP</legend>
-     <div class="radio-group">
-       <label class="radio-row"><input type="radio" name="protocol" value="IPV4" checked /> IPv4</label>
-       <label class="radio-row"><input type="radio" name="protocol" value="IPV6" /> IPv6</label>
-       <label class="radio-row"><input type="radio" name="protocol" value="IPV4V6" /> IPv4/IPv6</label>
-     </div>
-   </fieldset>
-
-   <button type="submit">دانلود و ساخت پروفایل</button>
- </form>
-
- <div class="footer">
-   Developer: <a href="https://github.com/soroushse7o" target="_blank" rel="noopener noreferrer">github.com/soroushse7o</a>
- </div>
-</div>
-
-<script>
-/**
- * iOS APN Profile Generator
- * Developed by: https://github.com/soroushse7o
- */
-
-function esc(s) {
- return (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-}
-
-function uuidv4() {
- return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
-   var r = Math.random() * 16 | 0, v = c === "x" ? r : (r & 0x3 | 0x8);
-   return v.toString(16);
- });
-}
-
-document.getElementById("apnForm").addEventListener("submit", function(e) {
- e.preventDefault();
- 
- var apn = document.getElementById("apn").value.trim();
- var errEl = document.getElementById("apnError");
- if (!apn) {
-   errEl.style.display = "block";
-   return;
- }
- errEl.style.display = "none";
-
- var username = document.getElementById("username").value.trim();
- var password = document.getElementById("password").value;
- var authtype = document.querySelector('input[name="authtype"]:checked').value;
- var proxyserver = document.getElementById("proxyserver").value.trim();
- var proxyport = document.getElementById("proxyport").value.trim();
- var payload = document.querySelector('input[name="payload"]:checked').value;
- var protocol = document.querySelector('input[name="protocol"]:checked').value;
-
- var payloadUUID = uuidv4();
- var rootUUID = uuidv4();
-
- var apnDict = "";
- apnDict += "<key>Name</key><string>" + esc(apn) + "</string>\n";
- apnDict += "<key>AuthenticationType</key><string>" + authtype + "</string>\n";
- if (username) apnDict += "<key>Username</key><string>" + esc(username) + "</string>\n";
- if (password) apnDict += "<key>Password</key><string>" + esc(password) + "</string>\n";
- if (proxyserver) apnDict += "<key>ProxyServer</key><string>" + esc(proxyserver) + "</string>\n";
- if (proxyport) apnDict += "<key>ProxyPort</key><integer>" + parseInt(proxyport || "0", 10) + "</integer>\n";
-
- var innerPayload;
- if (payload === "cellular") {
-   innerPayload =
-"<dict>\n" +
-"<key>APNs</key>\n<array>\n<dict>\n" + apnDict +
-"</dict>\n</array>\n" +
-"<key>AttachAPN</key>\n<dict>\n<key>Name</key><string>" + esc(apn) + "</string>\n</dict>\n" +
-"<key>PayloadDescription</key><string>Configures cellular data settings</string>\n" +
-"<key>PayloadDisplayName</key><string>Cellular</string>\n" +
-"<key>PayloadIdentifier</key><string>com.apple.cellular.managed." + payloadUUID + "</string>\n" +
-"<key>PayloadOrganization</key><string>github.com/soroushse7o</string>\n" +
-"<key>PayloadType</key><string>com.apple.cellular</string>\n" +
-"<key>PayloadUUID</key><string>" + payloadUUID + "</string>\n" +
-"<key>PayloadVersion</key><integer>1</integer>\n" +
-"</dict>";
- } else {
-   innerPayload =
-"<dict>\n" + apnDict +
-"<key>PayloadDescription</key><string>Configures APN settings</string>\n" +
-"<key>PayloadDisplayName</key><string>APN</string>\n" +
-"<key>PayloadIdentifier</key><string>com.apple.apn.managed." + payloadUUID + "</string>\n" +
-"<key>PayloadOrganization</key><string>github.com/soroushse7o</string>\n" +
-"<key>PayloadType</key><string>com.apple.apn.managed</string>\n" +
-"<key>PayloadUUID</key><string>" + payloadUUID + "</string>\n" +
-"<key>PayloadVersion</key><integer>1</integer>\n" +
-"</dict>";
- }
-
- var plist =
-'<?xml version="1.0" encoding="UTF-8"?>\n' +
-'<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n' +
-'<plist version="1.0">\n<dict>\n' +
-"<key>PayloadContent</key>\n<array>\n" + innerPayload + "\n</array>\n" +
-"<key>PayloadDescription</key><string>Custom APN configuration (protocol: " + protocol + ")</string>\n" +
-"<key>PayloadDisplayName</key><string>APN Settings - " + esc(apn) + "</string>\n" +
-"<key>PayloadIdentifier</key><string>com.apn.generator." + rootUUID + "</string>\n" +
-"<key>PayloadOrganization</key><string>github.com/soroushse7o</string>\n" +
-"<key>PayloadRemovalDisallowed</key><false/>\n" +
-"<key>PayloadType</key><string>Configuration</string>\n" +
-"<key>PayloadUUID</key><string>" + rootUUID + "</string>\n" +
-"<key>PayloadVersion</key><integer>1</integer>\n" +
-"</dict>\n</plist>";
-
- // ارسال تایپ استاندارد اپل برای باز شدن پنجره Install Profile در سافاری
- var blob = new Blob([plist], { type: "application/x-apple-aspen-config" });
- var url = URL.createObjectURL(blob);
- var a = document.createElement("a");
- a.href = url;
- a.download = (apn.replace(/[^a-z0-9]/gi, "_") || "custom") + ".mobileconfig";
- document.body.appendChild(a);
- a.click();
- document.body.removeChild(a);
- setTimeout(function() { URL.revokeObjectURL(url); }, 2000);
-});
-</script>
+	<h1>سازنده پروفایل پیکربندی APN برای iOS</h1>
+	<form method="post" action="./">
+		<fieldset>
+			<legend><label for="apn">APN (الزامی)</label></legend>
+			<input type="text" name="apn" id="apn" value="" style="ime-mode: disabled;" />
+		</fieldset>
+		<fieldset>
+			<legend><label for="username">نام کاربری</label></legend>
+			<input type="text" name="username" id="username" value="" style="ime-mode: disabled;" />
+		</fieldset>
+		<fieldset>
+			<legend><label for="password">رمز عبور</label></legend>
+			<input type="password" name="password" id="password" value="" style="ime-mode: disabled;" />
+		</fieldset>
+		<fieldset>
+			<legend>روش احراز هویت</legend>
+			<label for="CHAP"><input type="radio" name="authtype" id="CHAP" value="CHAP" checked="checked" /> CHAP</label>
+			<label for="PAP"><input type="radio" name="authtype" id="PAP" value="PAP" /> PAP</label>
+		</fieldset>
+		<fieldset>
+			<legend><label for="proxyserver">پروکسی</label></legend>
+			<label for="proxyserver">سرور: <input type="text" name="proxyserver" id="proxyserver" value="" style="ime-mode: inactive;" /></label>
+			<label for="proxyport">پورت: <input type="text" name="proxyport" id="proxyport" value="" style="ime-mode: disabled;" /></label>
+		</fieldset>
+		<fieldset>
+			<legend>نوع پی‌لود (Payload)</legend>
+			<label for="cellular"><input type="radio" name="payload" id="cellular" value="cellular" checked="checked" /> پی‌لود Cellular (توصیه شده برای iOS 7 به بعد)</label>
+			<label for="apn.managed"><input type="radio" name="payload" id="apn.managed" value="apn.managed" /> پی‌لود APN</label>
+		</fieldset>
+		<fieldset>
+			<legend>پروتکل</legend>
+			<label for="ipv4"><input type="radio" name="protocol" id="ipv4" value="1" /> IPv4</label>
+			<label for="ipv6"><input type="radio" name="protocol" id="ipv6" value="2" /> IPv6</label>
+			<label for="ipv4ipv6"><input type="radio" name="protocol" id="ipv4ipv6" value="3" /> IPv4/IPv6</label>
+		</fieldset>
+		<fieldset>
+			<legend>روش خروجی</legend>
+			<label for="download"><input type="radio" name="output" id="download" value="download" checked="checked" /> دانلود مستقیم</label>
+			<label for="view"><input type="radio" name="output" id="view" value="view" /> نمایش در مرورگر</label>
+			<label for="email"><input type="radio" name="output" id="email" value="email" /> ارسال با ایمیل</label>
+		</fieldset>
+		<p>
+			<input type="hidden" name="filename" id="filename" value="custom" />
+			<input type="hidden" name="version" id="version" value="1" />
+			<input type="submit" name="submit" value="ایجاد پروفایل" />
+		</p>
+	</form>
 </body>
 </html>
