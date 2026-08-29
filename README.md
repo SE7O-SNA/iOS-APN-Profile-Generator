@@ -53,6 +53,9 @@
 * **تصویر دوم (Profile Applied):** با اعمال مقدار `AllowedProtocolMask = 3` از طریق پروفایل، پشته شبکه به حالت `IPv4/IPv6` تغییر یافته و آدرس IPv6 معتبر اپراتور دریافت می‌گردد.
 * **تصویر سوم (WARP Established):** پس از برقراری بستر IPv6، تونل Cloudflare WARP بدون اختلال متصل شده و ترافیک شبکه به مقاصد انی‌کست کلودفلر هدایت می‌شود.
 
+<a href="https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627" target="_blank">
+  <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="160">
+</a>
 
 
 </div>
