@@ -1,6 +1,6 @@
 📱 iOS APN Profile Generator | سازنده پروفایل APN برای آیفون
 
-فارسی | English
+English | فارسی
 
 ⸻
 
@@ -8,59 +8,108 @@
 
 فارسی
 
-iOS APN Profile Generator یک ابزار تحت وب سبک، سریع و کاملاً سمت کاربر (Client-Side) برای ساخت پروفایل‌های پیکربندی Apple با فرمت .mobileconfig است.
+🌐 ابزار آنلاین ساخت پروفایل APN
 
-این ابزار به شما امکان می‌دهد تنظیمات سفارشی APN (Access Point Name) را برای دستگاه‌های iPhone و iPad ایجاد و به‌صورت مستقیم روی iOS / iPadOS نصب کنید.
+iOS APN Profile Generator یک ابزار آنلاین، ساده، سریع و کاملاً سمت کاربر (Client-Side) برای ساخت پروفایل‌های تنظیمات APN با فرمت .mobileconfig برای iPhone و iPad است.
 
-تمام فرآیند تولید پروفایل در مرورگر انجام می‌شود و اطلاعات واردشده برای ساخت پروفایل به سرور ارسال نمی‌شوند.
+با استفاده از این ابزار می‌توانید بدون نصب نرم‌افزار اضافی، تنظیمات APN اپراتور خود را وارد کرده و یک پروفایل پیکربندی قابل نصب روی iOS / iPadOS ایجاد کنید.
 
-✨ ویژگی‌ها
+🚀 ورود به ابزار آنلاین
 
-* 🔒 کاملاً Client-Side — پروفایل مستقیماً داخل مرورگر تولید می‌شود و نیازی به سرور یا پایگاه داده ندارد.
-* 📱 مخصوص iOS / iPadOS — خروجی در قالب استاندارد Apple Configuration Profile با پسوند .mobileconfig تولید می‌شود.
-* 🌐 سازگار با هاست‌های استاتیک — قابل اجرا روی GitHub Pages، Cloudflare Pages و سایر سرویس‌های Static Hosting.
-* ⚡ بدون نیاز به Build یا Backend — پروژه به‌صورت ساده و سبک اجرا می‌شود.
-* 🍎 پشتیبانی از MIME Type اپل — فایل با MIME Type استاندارد application/x-apple-aspen-config تولید می‌شود.
-* 🔧 پشتیبانی از Payloadهای APN — امکان تولید Payloadهای مدرن Cellular و Payloadهای Legacy APN.
-* 🔐 احراز هویت — پشتیبانی از روش‌های PAP و CHAP.
-* 🌍 پشتیبانی از IPv4 و IPv6 — امکان تنظیم پروتکل‌های شبکه در صورت پشتیبانی اپراتور و دستگاه.
-* 🌐 تنظیم Proxy — امکان تعریف Proxy و Port در پروفایل.
-* 💾 بدون ذخیره‌سازی اطلاعات — اطلاعات واردشده برای تولید پروفایل در سرویس خارجی ذخیره نمی‌شوند.
+📱 ساخت پروفایل APN آنلاین
 
-📲 نحوه ساخت و نصب پروفایل در آیفون
+برای ورود به ابزار و ساخت پروفایل APN روی لینک بالا کلیک کنید.
 
-1. با مرورگر Safari در iPhone یا iPad وارد ابزار شوید.
-2. اطلاعات APN موردنظر خود را وارد کنید.
-3. روی دانلود و ساخت پروفایل بزنید.
-4. در پیام نمایش‌داده‌شده توسط Safari، گزینه Allow را انتخاب کنید.
-5. وارد Settings شوید.
-6. گزینه Profile Downloaded را انتخاب کنید.
-7. روی Install بزنید و مراحل نصب را ادامه دهید.
-
-⚠️ توجه: استفاده از APN یا تنظیمات نادرست ممکن است باعث قطع اتصال اینترنت یا اختلال در اتصال داده همراه شود. مقادیر APN باید مطابق اطلاعات ارائه‌شده توسط اپراتور شما باشند.
-
-🌐 ابزار آنلاین
-
-🚀 ورود به iOS APN Profile Generator
-
-برای ساخت پروفایل APN به‌صورت آنلاین و مستقیم روی iPhone یا iPad از ابزار بالا استفاده کنید.
+این ابزار مستقیماً در مرورگر اجرا می‌شود و برای ساخت پروفایل نیازی به نصب برنامه یا ایجاد حساب کاربری ندارد.
 
 ⸻
 
-📊 تست و بررسی اتصال IPv6 / Dual-Stack
+✨ ویژگی‌ها
 
-در این پروژه، تأثیر اعمال تنظیمات سفارشی APN بر فعال‌شدن IPv4/IPv6 Dual-Stack نیز بررسی شده است.
+* 🔒 کاملاً سمت کاربر (Client-Side): تمام فرآیند ساخت پروفایل داخل مرورگر انجام می‌شود و برای تولید فایل نیازی به سرور Backend نیست.
+* 🛡️ بدون نیاز به ذخیره اطلاعات: اطلاعات واردشده برای تولید پروفایل در یک سرور خارجی ذخیره نمی‌شوند.
+* 📱 مخصوص iOS و iPadOS: خروجی با فرمت استاندارد Apple Configuration Profile یعنی .mobileconfig تولید می‌شود.
+* 🍎 پشتیبانی از MIME Type اپل: فایل با MIME Type application/x-apple-aspen-config تولید می‌شود تا Safari بتواند آن را به‌عنوان Configuration Profile شناسایی کند.
+* ⚡ سریع و سبک: بدون نیاز به نصب نرم‌افزار یا اجرای Backend.
+* 🌐 سازگار با Static Hosting: قابل میزبانی روی GitHub Pages، Cloudflare Pages و سایر سرویس‌های میزبانی استاتیک.
+* 🔧 پشتیبانی از Payloadهای مختلف APN: شامل Payloadهای مدرن Cellular و Payloadهای Legacy APN.
+* 🔐 پشتیبانی از احراز هویت: امکان استفاده از روش‌های PAP و CHAP.
+* 🌍 پشتیبانی از IPv4 و IPv6: امکان تنظیم پروتکل‌های شبکه در پروفایل.
+* 🌐 پشتیبانی از Proxy: امکان واردکردن Proxy و Port در صورت نیاز اپراتور.
+* 💾 تولید مستقیم فایل: پروفایل .mobileconfig مستقیماً توسط مرورگر ایجاد می‌شود.
 
-۱. تنظیمات پیش‌فرض	۲. اعمال پروفایل سفارشی	۳. بررسی اتصال WARP
-IPv6 غیرفعال	فعال‌شدن Dual-Stack	اتصال از طریق IPv6
+⸻
+
+📲 نحوه استفاده از ابزار
+
+1️⃣ ورود به ابزار
+
+با Safari در iPhone یا iPad وارد ابزار آنلاین شوید:
+
+🚀 iOS APN Profile Generator
+
+2️⃣ وارد کردن اطلاعات APN
+
+اطلاعات موردنیاز اپراتور خود را در فیلدهای مربوطه وارد کنید.
+
+بسته به تنظیمات ابزار، می‌توانید مواردی مانند موارد زیر را مشخص کنید:
+
+* APN
+* Username
+* Password
+* Authentication Type
+* Proxy
+* Proxy Port
+* IP Protocol
+
+3️⃣ ساخت پروفایل
+
+پس از واردکردن اطلاعات، روی دکمه:
+
+«دانلود و ساخت پروفایل»
+
+بزنید.
+
+ابزار فایل .mobileconfig را در مرورگر ایجاد می‌کند.
+
+⸻
+
+📲 نحوه نصب پروفایل در آیفون
+
+پس از ساخت پروفایل:
+
+1. ابزار را با Safari باز کنید.
+2. اطلاعات APN را وارد کنید.
+3. روی دانلود و ساخت پروفایل بزنید.
+4. در پیام Safari گزینه Allow را انتخاب کنید.
+5. وارد Settings شوید.
+6. در بالای صفحه گزینه Profile Downloaded را انتخاب کنید.
+7. روی Install بزنید.
+8. در صورت درخواست، Passcode دستگاه را وارد کنید.
+9. مراحل نصب را تا پایان ادامه دهید.
+
+⚠️ توجه: استفاده از APN یا تنظیمات نادرست می‌تواند باعث اختلال یا قطع اتصال اینترنت همراه شود. همیشه مقادیر صحیح APN را از اپراتور خود دریافت کنید.
+
+⸻
+
+📊 مراحل تست و نتایج اتصال IPv6 / Dual-Stack
+
+یکی از سناریوهای آزمایش این پروژه، بررسی تأثیر تنظیمات سفارشی APN بر فعال‌شدن IPv4/IPv6 Dual-Stack و اتصال سرویس‌هایی مانند Cloudflare WARP بوده است.
+
+۱. تنظیمات پیش‌فرض سیستم	۲. اعمال پروفایل سفارشی	۳. اتصال Cloudflare WARP
+IPv6 غیرفعال	فعال‌سازی Dual-Stack	برقراری اتصال WARP
 		
-تست ناموفق IPv6	دریافت IPv6 از شبکه اپراتور	برقراری اتصال WARP
+تست IPv6 ناموفق	دریافت IPv6 از شبکه اپراتور	برقراری اتصال WARP
 
-🔬 توضیح فنی
+🔬 توضیحات فنی مراحل آزمایش
 
 تصویر اول — Default Settings
 
-در این آزمایش، تنظیمات پیش‌فرض APN روی دستگاه باعث شد اتصال IPv6 برقرار نشود و تست IPv6 با خطای IPv6 test not reachable مواجه شود.
+در تنظیمات پیش‌فرض این سناریو، اتصال IPv6 برقرار نشده و تست با خطای:
+
+IPv6 test not reachable
+
+مواجه شد.
 
 تصویر دوم — Custom Profile
 
@@ -68,15 +117,29 @@ IPv6 غیرفعال	فعال‌شدن Dual-Stack	اتصال از طریق IPv6
 
 AllowedProtocolMask = 3
 
-پروتکل‌های IPv4 و IPv6 در پروفایل مجاز شدند و دستگاه، در صورت پشتیبانی شبکه اپراتور، امکان دریافت آدرس IPv6 را پیدا کرد.
+پروتکل‌های IPv4 و IPv6 در پروفایل مجاز شدند و در صورت پشتیبانی شبکه اپراتور، دستگاه توانست اتصال Dual-Stack برقرار کرده و یک آدرس IPv6 دریافت کند.
 
-تصویر سوم — WARP
+تصویر سوم — WARP Established
 
-پس از فراهم‌شدن اتصال IPv6، کلاینت Cloudflare WARP توانست ارتباط خود را برقرار کند و تونل شبکه ایجاد شود.
+پس از برقرارشدن اتصال IPv6، کلاینت Cloudflare WARP توانست ارتباط خود را برقرار کرده و تونل WARP ایجاد کند.
 
-ℹ️ نتیجه این آزمایش به تنظیمات اپراتور، شبکه، دستگاه و نسخه iOS وابسته است و فعال‌کردن IPv6 در پروفایل به‌تنهایی تضمین‌کننده دریافت IPv6 یا برقراری WARP نیست.
+ℹ️ نکته: این نتیجه به اپراتور، شبکه، مدل دستگاه، نسخه iOS و تنظیمات شبکه بستگی دارد. فعال‌کردن IPv6 در پروفایل به‌تنهایی تضمین نمی‌کند که دستگاه حتماً IPv6 دریافت کند یا Cloudflare WARP متصل شود.
 
-📱 Cloudflare 1.1.1.1 / WARP
+⸻
+
+🌐 استفاده آنلاین
+
+اگر فقط می‌خواهید پروفایل APN خود را بسازید، نیازی به دریافت یا نصب سورس پروژه ندارید.
+
+👉 🚀 ورود مستقیم به ابزار آنلاین
+
+ابزار مستقیماً در مرورگر اجرا می‌شود و می‌توانید پروفایل .mobileconfig موردنظر خود را ایجاد کنید.
+
+⸻
+
+📱 Cloudflare WARP
+
+برای استفاده از Cloudflare WARP می‌توانید برنامه رسمی 1.1.1.1: Faster Internet را از App Store دریافت کنید.
 
 <a href="https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627" target="_blank">
   <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="160">
@@ -84,13 +147,17 @@ AllowedProtocolMask = 3
 
 ⸻
 
-🛠️ اجرا و استفاده
+🛠️ استقرار پروژه
 
-این پروژه برای اجرا به Backend یا Database نیاز ندارد.
+این پروژه برای اجرا به Backend یا Database نیاز ندارد و می‌توان آن را به‌صورت یک وب‌سایت استاتیک میزبانی کرد.
 
-کافی است فایل‌های پروژه را روی یک سرویس Static Hosting مانند GitHub Pages یا Cloudflare Pages قرار دهید.
+سرویس‌های مناسب برای میزبانی
 
-ساختار کلی پروژه
+* GitHub Pages
+* Cloudflare Pages
+* سایر Static Hostingها
+
+ساختار پروژه
 
 iOS-APN-Profile-Generator/
 ├── index.html
@@ -112,11 +179,12 @@ iOS-APN-Profile-Generator/
 * Username
 * Password
 * Proxy
-* سایر مقادیر واردشده
+* Proxy Port
+* سایر تنظیمات واردشده
 
-برای تولید پروفایل در مرورگر پردازش می‌شوند و پروژه برای تولید فایل .mobileconfig به Backend نیاز ندارد.
+برای تولید پروفایل در مرورگر پردازش می‌شوند و برای ساخت فایل .mobileconfig به Backend نیاز نیست.
 
-با این حال، حریم خصوصی نهایی به سرویس Hosting و نحوه استفاده از وب‌سایت نیز وابسته است.
+⚠️ حریم خصوصی نهایی وب‌سایت می‌تواند به تنظیمات سرویس میزبانی و کدهای اضافه‌شده به پروژه نیز وابسته باشد.
 
 ⸻
 
@@ -132,75 +200,134 @@ iOS-APN-Profile-Generator/
 
 English
 
-iOS APN Profile Generator is a lightweight, fast, fully client-side web utility for generating Apple Configuration Profiles (.mobileconfig) with custom APN (Access Point Name) settings.
+🌐 Online APN Profile Generator
 
-The tool is designed for iPhone and iPad devices running iOS / iPadOS and allows users to generate and install custom cellular configuration profiles directly from Safari.
+iOS APN Profile Generator is a simple, fast, fully client-side online tool for creating custom APN configuration profiles in the .mobileconfig format for iPhone and iPad.
 
-The profile is generated locally in the browser, without requiring a backend server or database.
+The tool allows you to enter your carrier’s APN settings and generate an Apple Configuration Profile directly in your browser without installing additional software or using a backend server.
+
+🚀 Launch the Online Tool
+
+📱 Open iOS APN Profile Generator
+
+Click the link above to open the online generator and create an APN profile.
+
+The tool runs directly in your browser and does not require an account or additional software.
+
+⸻
 
 ✨ Features
 
-* 🔒 Fully Client-Side — Profiles are generated directly in the browser without requiring a backend.
-* 📱 Designed for iOS / iPadOS — Generates Apple Configuration Profiles using the .mobileconfig format.
-* 🌐 Static Hosting Compatible — Works with GitHub Pages, Cloudflare Pages, and other static hosting services.
-* ⚡ No Build or Backend Required — Lightweight and simple to deploy.
-* 🍎 Apple Configuration MIME Type — Uses the standard application/x-apple-aspen-config MIME type.
-* 🔧 APN Payload Support — Supports modern Cellular payloads as well as legacy APN payloads.
-* 🔐 Authentication Support — Supports PAP and CHAP authentication.
-* 🌍 IPv4 / IPv6 Support — Allows network protocol configuration where supported by the carrier and device.
-* 🌐 Proxy Configuration — Supports custom proxy and port settings.
-* 💾 No Profile Data Storage — User-provided values are not stored on an external server for profile generation.
+* 🔒 Fully Client-Side: The profile is generated directly in the browser without requiring a backend server.
+* 🛡️ No Profile Data Storage: User-provided values are not sent to an external server for profile generation.
+* 📱 Built for iOS / iPadOS: Generates Apple Configuration Profiles using the .mobileconfig format.
+* 🍎 Apple Configuration MIME Type: Uses application/x-apple-aspen-config so Safari can recognize the file as an Apple Configuration Profile.
+* ⚡ Fast and Lightweight: No additional software or backend infrastructure is required.
+* 🌐 Static Hosting Compatible: Can be hosted on GitHub Pages, Cloudflare Pages, or other static hosting services.
+* 🔧 APN Payload Support: Supports modern Cellular payloads as well as legacy APN payloads.
+* 🔐 Authentication Support: Supports PAP and CHAP authentication.
+* 🌍 IPv4 / IPv6 Support: Allows IPv4 and IPv6 protocol configuration.
+* 🌐 Proxy Support: Allows custom proxy and port configuration when required.
+* 💾 Direct Profile Generation: The .mobileconfig file is generated directly by the browser.
 
-📲 How to Generate and Install a Profile on iOS
+⸻
 
-1. Open the tool in Safari on your iPhone or iPad.
-2. Enter the required APN information.
-3. Tap Generate Profile / دانلود و ساخت پروفایل.
-4. When Safari displays the download prompt, tap Allow.
+📲 How to Use the Online Tool
+
+1️⃣ Open the Generator
+
+Open the online generator using Safari on your iPhone or iPad:
+
+🚀 iOS APN Profile Generator
+
+2️⃣ Enter Your APN Information
+
+Enter the APN information provided by your mobile carrier.
+
+Depending on the available options, you can configure:
+
+* APN
+* Username
+* Password
+* Authentication Type
+* Proxy
+* Proxy Port
+* IP Protocol
+
+3️⃣ Generate the Profile
+
+After entering the required information, tap:
+
+Generate Profile / دانلود و ساخت پروفایل
+
+The .mobileconfig file will be generated directly in your browser.
+
+⸻
+
+📲 How to Install the Profile on iPhone
+
+After generating the profile:
+
+1. Open the generator using Safari.
+2. Enter your APN information.
+3. Tap Generate Profile.
+4. Select Allow when Safari asks to download the configuration profile.
 5. Open Settings.
-6. Tap Profile Downloaded.
-7. Tap Install and follow the on-screen instructions.
+6. Tap Profile Downloaded near the top of the page.
+7. Tap Install.
+8. Enter your device passcode if requested.
+9. Follow the remaining installation steps.
 
-⚠️ Important: Incorrect APN or network settings may cause cellular data connectivity issues. Always use APN values provided or recommended by your mobile carrier.
-
-🌐 Online Tool
-
-🚀 Launch iOS APN Profile Generator
-
-Use the online tool to generate custom APN configuration profiles directly from your iPhone or iPad.
+⚠️ Important: Incorrect APN or network settings may cause cellular data connectivity problems. Always use the correct APN values provided by your mobile carrier.
 
 ⸻
 
 📊 IPv6 / Dual-Stack Connectivity Test
 
-The project also includes an experimental test demonstrating the effect of custom APN configuration on IPv4/IPv6 Dual-Stack connectivity.
+One of the project’s test scenarios examines the effect of custom APN configuration on IPv4/IPv6 Dual-Stack connectivity and services such as Cloudflare WARP.
 
-1. Default Configuration	2. Custom Profile	3. WARP Connectivity
-IPv6 Disabled	Dual-Stack Enabled	IPv6 Connectivity
+1. Default System Configuration	2. Custom Profile Applied	3. Cloudflare WARP Connection
+IPv6 Disabled	Dual-Stack Enabled	WARP Connection Established
 		
-IPv6 test failure	IPv6 address assigned by carrier	WARP connection established
+IPv6 connectivity test failed	IPv6 address assigned by carrier	WARP connection established
 
-🔬 Technical Details
+🔬 Technical Test Details
 
 Image 1 — Default Settings
 
-In the test scenario, the device did not establish IPv6 connectivity using the default APN configuration, resulting in an IPv6 test not reachable error.
+In the default configuration used in this test scenario, IPv6 connectivity was unavailable and the test returned:
+
+IPv6 test not reachable
 
 Image 2 — Custom Profile
 
-The custom profile enabled both IPv4 and IPv6 by setting:
+The custom profile enabled IPv4 and IPv6 by setting:
 
 AllowedProtocolMask = 3
 
-When supported by the carrier and device, this allowed the cellular connection to operate using IPv4/IPv6 Dual-Stack networking.
+When supported by the carrier network, the device was able to establish Dual-Stack connectivity and obtain an IPv6 address.
 
-Image 3 — WARP
+Image 3 — WARP Established
 
-After IPv6 connectivity became available, the Cloudflare WARP client was able to establish its network connection and create the WARP tunnel.
+After IPv6 connectivity became available, the Cloudflare WARP client was able to establish its connection and create the WARP tunnel.
 
-ℹ️ The result of this test depends on the carrier network, device, iOS version, and network configuration. Enabling IPv6 in a configuration profile does not by itself guarantee IPv6 connectivity or WARP functionality.
+ℹ️ Note: Results may vary depending on the carrier, network, device model, iOS version, and network configuration. Enabling IPv6 in a configuration profile alone does not guarantee IPv6 connectivity or Cloudflare WARP functionality.
 
-📱 Cloudflare 1.1.1.1 / WARP
+⸻
+
+🌐 Use the Online Generator
+
+If you only want to create an APN profile, you do not need to download or install the project source code.
+
+👉 🚀 Open the Online APN Profile Generator
+
+The tool runs directly in your browser and allows you to generate your .mobileconfig profile online.
+
+⸻
+
+📱 Cloudflare WARP
+
+You can install the official 1.1.1.1: Faster Internet application from the App Store if you want to use Cloudflare WARP.
 
 <a href="https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627" target="_blank">
   <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="160">
@@ -210,9 +337,13 @@ After IPv6 connectivity became available, the Cloudflare WARP client was able to
 
 🛠️ Deployment
 
-The project does not require a backend server or database.
+The project does not require a backend server or database and can be hosted as a static website.
 
-Simply host the project files on a static hosting service such as GitHub Pages or Cloudflare Pages.
+Recommended Hosting
+
+* GitHub Pages
+* Cloudflare Pages
+* Other static hosting services
 
 Project Structure
 
@@ -230,17 +361,18 @@ iOS-APN-Profile-Generator/
 
 This project is designed to operate entirely on the client side.
 
-Values such as:
+Information such as:
 
 * APN
 * Username
 * Password
-* Proxy settings
+* Proxy
+* Proxy Port
 * Other configuration values
 
-are processed locally in the browser. The project does not require a backend server to generate the .mobileconfig file.
+is processed in the browser and does not require a backend server to generate the .mobileconfig file.
 
-However, overall privacy may also depend on the hosting provider and how the website is configured.
+⚠️ The overall privacy of the website may also depend on the hosting configuration and any additional code integrated into the project.
 
 ⸻
 
@@ -248,4 +380,4 @@ However, overall privacy may also depend on the hosting provider and how the web
 
 This project is released under the MIT License.
 
-You are free to use, modify, copy, and redistribute the project according to the terms of the MIT License.
+You are free to use, copy, modify, and redistribute the project according to the terms of the MIT License.
