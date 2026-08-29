@@ -1,7 +1,12 @@
+<!DOCTYPE html>
+<!--
+  Developer: github.com/soroushse7o
+-->
 <html lang="fa" dir="rtl">
 <head>
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="author" content="github.com/soroushse7o" />
  <title>سازنده پروفایل APN برای iOS</title>
  <style>
    :root {
@@ -135,6 +140,24 @@
      margin-top: 6px;
      display: none;
    }
+
+   .footer {
+     margin-top: 24px;
+     text-align: center;
+     font-size: 12px;
+     color: var(--subtext);
+     direction: ltr;
+   }
+
+   .footer a {
+     color: var(--primary);
+     text-decoration: none;
+     font-weight: 500;
+   }
+
+   .footer a:hover {
+     text-decoration: underline;
+   }
  </style>
 </head>
 <body>
@@ -196,11 +219,20 @@
 
    <button type="submit">دانلود و ساخت پروفایل</button>
  </form>
+
+ <div class="footer">
+   Developer: <a href="https://github.com/soroushse7o" target="_blank" rel="noopener noreferrer">github.com/soroushse7o</a>
+ </div>
 </div>
 
 <script>
+/**
+ * iOS APN Profile Generator
+ * Developed by: https://github.com/soroushse7o
+ */
+
 function esc(s) {
- return (s || "").replace(/&/g,"&").replace(/</g,"<").replace(/>/g,">");
+ return (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
 
 function uuidv4() {
@@ -250,6 +282,7 @@ document.getElementById("apnForm").addEventListener("submit", function(e) {
 "<key>PayloadDescription</key><string>Configures cellular data settings</string>\n" +
 "<key>PayloadDisplayName</key><string>Cellular</string>\n" +
 "<key>PayloadIdentifier</key><string>com.apple.cellular.managed." + payloadUUID + "</string>\n" +
+"<key>PayloadOrganization</key><string>github.com/soroushse7o</string>\n" +
 "<key>PayloadType</key><string>com.apple.cellular</string>\n" +
 "<key>PayloadUUID</key><string>" + payloadUUID + "</string>\n" +
 "<key>PayloadVersion</key><integer>1</integer>\n" +
@@ -260,6 +293,7 @@ document.getElementById("apnForm").addEventListener("submit", function(e) {
 "<key>PayloadDescription</key><string>Configures APN settings</string>\n" +
 "<key>PayloadDisplayName</key><string>APN</string>\n" +
 "<key>PayloadIdentifier</key><string>com.apple.apn.managed." + payloadUUID + "</string>\n" +
+"<key>PayloadOrganization</key><string>github.com/soroushse7o</string>\n" +
 "<key>PayloadType</key><string>com.apple.apn.managed</string>\n" +
 "<key>PayloadUUID</key><string>" + payloadUUID + "</string>\n" +
 "<key>PayloadVersion</key><integer>1</integer>\n" +
@@ -274,6 +308,7 @@ document.getElementById("apnForm").addEventListener("submit", function(e) {
 "<key>PayloadDescription</key><string>Custom APN configuration (protocol: " + protocol + ")</string>\n" +
 "<key>PayloadDisplayName</key><string>APN Settings - " + esc(apn) + "</string>\n" +
 "<key>PayloadIdentifier</key><string>com.apn.generator." + rootUUID + "</string>\n" +
+"<key>PayloadOrganization</key><string>github.com/soroushse7o</string>\n" +
 "<key>PayloadRemovalDisallowed</key><false/>\n" +
 "<key>PayloadType</key><string>Configuration</string>\n" +
 "<key>PayloadUUID</key><string>" + rootUUID + "</string>\n" +
